@@ -5,7 +5,7 @@ const Overview = () => {
     <div className="mt-4">
       <div className="flex justify-between items-center">
         <h2 className="font-medium">Overview</h2>
-        <div className="bg-white border border-[#D9D9D] px-2 py-1">
+        <div className="bg-white rounded-[4px] border border-[#D9D9D] px-2 py-1">
           <select name="date" id="date" className="text-sm">
             <option value="1">Last Month</option>
             <option value="2">Last week</option>
@@ -13,7 +13,7 @@ const Overview = () => {
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3 text-left mt-4">
+      <div className="grid grid-rows-2 grid-cols-none sm:grid-cols-2 sm:grid-rows-none gap-3 text-left mt-4">
         <div className="bg-white rounded-lg p-5 shadow-sm">
           <p className="text-[#4D4D4D]">Online orders</p>
           <p className="text-3xl font-medium">231</p>

@@ -3,12 +3,12 @@ import React from "react";
 const Header = () => {
   return (
     <header className="bg-white z-20 border-b border-[#D9D9D9] w-full sticky top-0">
-      <div className="max-w-6xl mx-auto grid grid-cols-3 gap-3 w-full bg-white h-16 py-3 px-8">
-        <div className=" flex items-center gap-1 mr-4">
-          <div className="lg:hidden pe-1">
+      <div className="max-w-6xl mx-auto grid grid-cols-3 gap-3 w-full bg-white h-16 py-3 px-3 sm:px-8">
+        <div className="flex items-center gap-1 mr-4">
+          <div className="lg:hidden pe-1 cursor-pointer">
             <svg
-              width="13"
-              height="10"
+              width="16"
+              height="12"
               viewBox="0 0 13 10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const Header = () => {
               fill="#4D4D4D"
             />
           </svg>
-          <p className="text-xs text-black/80">How it works</p>
+          <p className="text-xs text-black/80 hidden sm:block">How it works</p>
         </div>
 
         <div className="flex items-center px-4 gap-2 bg-[#F2F2F2] hover:outline hover:outline-black/10 text-[#808080] rounded-md">

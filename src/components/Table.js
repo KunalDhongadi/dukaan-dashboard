@@ -93,7 +93,7 @@ const Table = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 bg-[#F2F2F2] text-[#4D4D4D] rounded-[4px] text-sm py-3 mt-2">
+        <div className="grid grid-cols-4 gap-2 bg-[#F2F2F2] text-[#4D4D4D] rounded-[4px] text-sm py-3 mt-2">
           <p className="text-left ps-3 font-medium">Order ID</p>
           <p className="font-medium">Order date</p>
           <p className="text-right font-medium">Order amount</p>
@@ -104,7 +104,7 @@ const Table = () => {
 
         {data.map((d) => {
           return (
-            <div className="grid grid-cols-4 border-b border-[#E6E6E6] text-sm py-3 mx-3 mt-2">
+            <div className="grid grid-cols-4 gap-2 border-b border-[#E6E6E6] text-sm py-3 mx-3 mt-2">
               <p className="text-left ps-3 text-[#146EB4] font-medium">{d.id}</p>
               <p>{d.date}</p>
               <p className="text-right">{d.OrderAmt}</p>

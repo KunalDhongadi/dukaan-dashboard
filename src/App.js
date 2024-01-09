@@ -14,7 +14,7 @@ function App() {
         </div>
         <div className="lg:ms-[224px] grow">
           <Header />
-          <div className="flex flex-col px-8 max-w-6xl mx-auto">
+          <div className="flex flex-col px-3 sm:px-8 max-w-6xl mx-auto">
             <Overview />
             <Table />
           </div>

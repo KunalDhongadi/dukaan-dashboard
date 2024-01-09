@@ -22,7 +22,7 @@ const Table = () => {
 
       <div className="bg-white shadow-sm mb-4 rounded-lg">
         <div className="bg-white sticky top-16 pt-3 px-3">
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between gap-2">
           <div className="border border-[#D9D9D] hover:outline hover:outline-black/10 rounded-[4px] text-sm flex gap-2 items-center px-4 py-2">
             <svg
               width="14"
@@ -40,7 +40,7 @@ const Table = () => {
             <input placeholder="Search by order ID..." className="bg-inherit focus:outline-none" />
           </div>
           <div className="flex gap-2">
-            <button className="flex rounded-[4px] items-center px-4 py-2 gap-2 text-sm border border-[#D9D9D]">
+            <button className="flex rounded-[4px] items-center px-4 py-2 gap-2 text-sm border border-[#D9D9D]" aria-label="sort">
               Sort
               <svg
                 width="14"
@@ -50,33 +50,33 @@ const Table = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M0.623006 7.93375C0.831286 7.72547 1.16897 7.72547 1.37725 7.93375L3.641 10.1975L5.90474 7.93375C6.11302 7.72547 6.45071 7.72547 6.65899 7.93375C6.86727 8.14203 6.86727 8.47972 6.65899 8.688L4.01812 11.3289C3.80984 11.5371 3.47215 11.5371 3.26387 11.3289L0.623006 8.688C0.414727 8.47972 0.414727 8.14203 0.623006 7.93375Z"
                   fill="#4D4D4D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M3.64095 0.515153C3.9355 0.515153 4.17428 0.753934 4.17428 1.04849L4.17428 10.9517C4.17428 11.2463 3.9355 11.4851 3.64095 11.4851C3.3464 11.4851 3.10762 11.2463 3.10762 10.9517L3.10762 1.04849C3.10762 0.753934 3.3464 0.515153 3.64095 0.515153Z"
                   fill="#4D4D4D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M13.3772 4.06646C13.169 4.27474 12.8313 4.27474 12.623 4.06646L10.3592 1.80272L8.0955 4.06646C7.88722 4.27474 7.54953 4.27474 7.34126 4.06646C7.13298 3.85818 7.13298 3.52049 7.34126 3.31221L9.98212 0.671346C10.1904 0.463067 10.5281 0.463067 10.7364 0.671346L13.3772 3.31221C13.5855 3.52049 13.5855 3.85818 13.3772 4.06646Z"
                   fill="#4D4D4D"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M10.3593 11.4851C10.0647 11.4851 9.82596 11.2463 9.82596 10.9517L9.82596 1.04847C9.82596 0.753922 10.0647 0.515141 10.3593 0.515141C10.6538 0.515142 10.8926 0.753922 10.8926 1.04847L10.8926 10.9517C10.8926 11.2463 10.6538 11.4851 10.3593 11.4851Z"
                   fill="#4D4D4D"
                 />
               </svg>
             </button>
 
-            <button className="border border-[#D9D9D] rounded-[4px] flex px-3 py-2 justify-center items-center">
+            <button className="border border-[#D9D9D] rounded-[4px] flex px-3 py-2 justify-center items-center" aria-label="export">
               <svg
                 width="18"
                 height="18"
@@ -93,7 +93,7 @@ const Table = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-2 bg-[#F2F2F2] text-[#4D4D4D] rounded-[4px] text-sm py-3 mt-2">
+        <div className="grid grid-cols-4 gap-4 bg-[#F2F2F2] text-[#4D4D4D] rounded-[4px] text-sm py-3 mt-2">
           <p className="text-left ps-3 font-medium">Order ID</p>
           <p className="font-medium">Order date</p>
           <p className="text-right font-medium">Order amount</p>
@@ -102,9 +102,9 @@ const Table = () => {
 
         </div>
 
-        {data.map((d) => {
+        {data.map((d,index) => {
           return (
-            <div className="grid grid-cols-4 gap-2 border-b border-[#E6E6E6] text-sm py-3 mx-3 mt-2">
+            <div key={index} className="grid grid-cols-4 gap-4 border-b border-[#E6E6E6] text-sm py-3 mx-3 mt-2">
               <p className="text-left ps-3 text-[#146EB4] font-medium">{d.id}</p>
               <p>{d.date}</p>
               <p className="text-right">{d.OrderAmt}</p>
@@ -117,33 +117,33 @@ const Table = () => {
             
 
 <nav aria-label="Page navigation example">
-  <ul class="inline-flex -space-x-px text-sm my-4">
+  <ul className="inline-flex -space-x-px text-sm my-4">
     <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight border border-[#D9D9D9] rounded-[4px] font-medium">Previous</a>
+      <a href="/" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight border border-[#D9D9D9] rounded-[4px] font-medium">Previous</a>
     </li>
     <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 leading-tight">1</a>
+      <a href="/" className="flex items-center justify-center px-3 h-8 leading-tight">1</a>
     </li>
     <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 leading-tight">...</a>
-    </li>
-
-    <li>
-      <a href="/" aria-current="page" class="flex items-center justify-center px-3 h-8 text-white bg-[#146EB4] rounded-[4px]">10</a>
-    </li>
-    <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 leading-tight">11</a>
-    </li>
-    <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 leading-tight">12</a>
-    </li>
-    <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 leading-tight">13</a>
+      <a href="/" className="flex items-center justify-center px-3 h-8 leading-tight">...</a>
     </li>
 
+    <li>
+      <a href="/" aria-current="page" className="flex items-center justify-center px-3 h-8 text-white bg-[#146EB4] rounded-[4px]">10</a>
+    </li>
+    <li>
+      <a href="/" className="flex items-center justify-center px-3 h-8 leading-tight">11</a>
+    </li>
+    <li>
+      <a href="/" className="flex items-center justify-center px-3 h-8 leading-tight">12</a>
+    </li>
+    <li>
+      <a href="/" className="flex items-center justify-center px-3 h-8 leading-tight">13</a>
+    </li>
+
 
     <li>
-      <a href="/" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight border border-[#D9D9D9] rounded-[4px] font-medium">Next</a>
+      <a href="/" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight border border-[#D9D9D9] rounded-[4px] font-medium">Next</a>
     </li>
   </ul>
 </nav>

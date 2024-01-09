@@ -12,9 +12,15 @@ body{
 } */
 
 /* width */
+
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
 .navbarItems::-webkit-scrollbar {
   width: 6px;
 }
+
 
 /* Track */
 .navbarItems::-webkit-scrollbar-track {
@@ -25,6 +31,7 @@ body{
 /* Handle */
 .navbarItems::-webkit-scrollbar-thumb {
   background: #353c5384; 
+  border-radius: 12px;
 }
 
 /* Handle on hover */
